@@ -8,7 +8,7 @@ const userSchema = new Schema ({
     password: String
 });
 
-//On Save Hook, encrypt password
+//On Save Hook, encrypt Password
 userSchema.pre('save', function(next) {
     const user = this;
 
