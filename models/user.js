@@ -30,7 +30,6 @@ userSchema.pre('save', function(next) {
         });
     });
 });
-
 //Create model class
 const ModelClass = mongoose.model('user', userSchema);
 
