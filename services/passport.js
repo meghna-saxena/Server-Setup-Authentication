@@ -10,8 +10,15 @@ const localOptions = {usernameField: 'email'};
 
 //Create local strategy
 const localLogin = new LocalStrategy(localOptions, function(email, password, done) {
-    //Verify the username and password, call 'done' if its correct, 
+    //Verify the username(email) and password, call 'done' if its correct, 
     //else call 'done' with false
+    User.findOne({email: email}, function(err, user) {
+        if(err) {return done(err); }
+        if (!user) {return done(null, false); }
+
+        //Compare passwords
+        //Is `password` = user.password?
+    });
 });
 
 //Setup options for jwt strategy
