@@ -17,12 +17,13 @@ const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
     //otherwise, call 'done' without user object
     //Note: user ID is encoded as sub property on the token
 
-    User.findByID(payload.sub, function(err, user) {
-        if(err) {return done(err, false); }
-        if(user) {
-            done(null, user);
+    User.findById(payload.sub, function(err, user) {
+        if (err) { return done(err, false); }
+    
+        if (user) {
+          done(null, user);
         } else {
-            done(null, false);
+          done(null, false);
         }
     });
 });
