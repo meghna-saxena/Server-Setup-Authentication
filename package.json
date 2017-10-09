@@ -13,10 +13,6 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/meghna-saxena/Server-Setup-Authentication/issues"
-  },
-  "homepage": "https://github.com/meghna-saxena/Server-Setup-Authentication#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
